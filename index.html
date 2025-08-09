@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hourly Real-Time Timer</title>
+    <style>
+      body {
+        background-color: #0d1117;
+        color: #f0f6fc;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      #countdown {
+        font-size: 5rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      #next-hour {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Real-Time Hourly Timer</h1>
+    <div id="countdown">--:--:--</div>
+    <div id="next-hour"></div>
+
+    <script>
+      function updateTimer() {
+        const now = new Date();
+
+        // Get the next hour mark
+        const nextHour = new Date(now);
+        nextHour.setMinutes(0, 0, 0);
+        nextHour.setHours(
+          now.getMinutes() === 0 && now.getSeconds() === 0
+            ? now.getHours()
+            : now.getHours() + 1
+        );
+
+        // Calculate time difference in ms
+        const diff = nextHour - now;
+
+        // Convert to hours, minutes, seconds
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        // Format with leading zeros
+        const format = (n) => n.toString().padStart(2, "0");
+        document.getElementById("countdown").textContent = `${format(
+          hours
+        )}:${format(minutes)}:${format(seconds)}`;
+
+        // Show which hour is coming next
+        const nextHourLabel = nextHour.toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+        document.getElementById(
+          "next-hour"
+        ).textContent = `Next checkpoint: ${nextHourLabel}`;
+      }
+
+      // Update every second
+      setInterval(updateTimer, 1000);
+      updateTimer(); // initial call
+    </script>
+  </body>
+</html>
