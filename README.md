@@ -1,31 +1,31 @@
-<img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
+img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# [eda_time_entho_ayi] 🎯
+# [eda time entho ayi] 🎯
 
 
 ## Basic Details
-### Team Name: [individual]
+### Team Name: [Individual]
 
 
 ### Team Members
-- Team Lead: [Alex] - [College_engineering_adoor]
-- Member 2: [Name] - [College]
+- Team Lead: [Alex] - [College of engineering Adoor]
+- Member 2: [Alex] - [College of engineering Adoor] 
 - Member 3: [Name] - [College]
 
 ### Project Description
 [During boring lectures, friends often tell the time as “minutes left.” This site does the same — syncing with real time to show only the minutes remaining in the current hour, resetting every 60 minutes like a loop timer.]
 
 ### The Problem (that doesn't exist)
-[th]
+[Tired of old way of looking time, make a new style for looking time where minitues matter more than hour?]
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+[A timer which runs repeatly for 60 mins,then resets every hour and shows next time with respect to real world time]
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
+- [HTML]
 - [Frameworks used]
 - [Libraries used]
 - [Tools used]
@@ -41,7 +41,7 @@ For Software:
 [commands]
 
 # Run
-[commands]
+[By double clicking runs the wesite]
 
 ### Project Documentation
 For Software:
